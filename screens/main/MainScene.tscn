@@ -1,0 +1,426 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://tiles/ladder_32x32.png" type="Texture" id=1]
+[ext_resource path="res://screens/main/Player.gd" type="Script" id=2]
+[ext_resource path="res://screens/main/MainScene.gd" type="Script" id=3]
+[ext_resource path="res://screens/main/sprites/hero.png" type="Texture" id=5]
+[ext_resource path="res://tiles/ladder_500x500.png" type="Texture" id=6]
+[ext_resource path="res://tiles/finger_3.png" type="Texture" id=8]
+[ext_resource path="res://tiles/neutral_hall_225x225.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/comfortaa/static/Comfortaa-SemiBold.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://fonts/comfortaa/static/Comfortaa-Medium.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://fonts/comfortaa/static/Comfortaa-Bold.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 64
+outline_size = 3
+outline_color = Color( 0.235294, 0.176471, 0.933333, 1 )
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://fonts/comfortaa/static/Comfortaa-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 17
+font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://fonts/comfortaa/static/Comfortaa-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 17
+font_data = SubResource( 9 )
+
+[sub_resource type="DynamicFontData" id=11]
+font_path = "res://fonts/comfortaa/static/Comfortaa-Medium.ttf"
+
+[sub_resource type="DynamicFont" id=12]
+font_data = SubResource( 11 )
+
+[sub_resource type="StreamTexture" id=13]
+flags = 4
+
+[sub_resource type="TileSet" id=14]
+0/name = "Ladder"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 96 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+2/name = "BigLadder"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 224, 224 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+4/name = "Neutral"
+4/texture = SubResource( 13 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 32, 96 )
+4/tile_mode = 2
+4/autotile/icon_coordinate = Vector2( 0, 0 )
+4/autotile/tile_size = Vector2( 32, 32 )
+4/autotile/spacing = 0
+4/autotile/occluder_map = [  ]
+4/autotile/navpoly_map = [  ]
+4/autotile/priority_map = [  ]
+4/autotile/z_index_map = [  ]
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Finger"
+5/texture = SubResource( 13 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 32, 0, 32, 96 )
+5/tile_mode = 2
+5/autotile/icon_coordinate = Vector2( 0, 0 )
+5/autotile/tile_size = Vector2( 32, 32 )
+5/autotile/spacing = 0
+5/autotile/occluder_map = [  ]
+5/autotile/navpoly_map = [  ]
+5/autotile/priority_map = [  ]
+5/autotile/z_index_map = [  ]
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+
+[sub_resource type="TileSet" id=15]
+1/name = "Ladder"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 225, 675 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 225, 225 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "finger_3.png 2"
+2/texture = ExtResource( 8 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Finger"
+3/texture = ExtResource( 8 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 225, 675 )
+3/tile_mode = 2
+3/autotile/icon_coordinate = Vector2( 0, 0 )
+3/autotile/tile_size = Vector2( 225, 225 )
+3/autotile/spacing = 0
+3/autotile/occluder_map = [  ]
+3/autotile/navpoly_map = [  ]
+3/autotile/priority_map = [  ]
+3/autotile/z_index_map = [  ]
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "NeutralHall"
+4/texture = ExtResource( 9 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 0, 225, 225 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 34.6483, 32.9921 )
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 32, 32 )
+
+[node name="Game" type="Control"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1022.0
+margin_bottom = 599.0
+color = Color( 0.372549, 0.12549, 0.141176, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UIZone" type="ColorRect" parent="."]
+margin_top = 448.0
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.462745, 0.482353, 0.494118, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="UIZone"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 4.94055
+margin_bottom = -123.059
+custom_fonts/font = SubResource( 2 )
+text = "Little Fingers and Ladders"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DiceZone" type="ColorRect" parent="UIZone"]
+margin_left = 103.0
+margin_top = 19.0
+margin_right = 252.0
+margin_bottom = 131.0
+color = Color( 0.184314, 0.188235, 0.196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="UIZone/DiceZone"]
+margin_right = 151.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 4 )
+text = "Dice Roll:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RollDisplay" type="Label" parent="UIZone/DiceZone"]
+margin_left = 1.0
+margin_top = 29.0
+margin_right = 149.0
+margin_bottom = 113.0
+custom_fonts/font = SubResource( 6 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoZone" type="ColorRect" parent="UIZone"]
+margin_left = 744.0
+margin_top = 23.0
+margin_right = 978.0
+margin_bottom = 130.0
+color = Color( 0.184314, 0.188235, 0.196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressText" type="Label" parent="UIZone/InfoZone"]
+margin_left = 1.0
+margin_top = 15.7279
+margin_right = 233.0
+margin_bottom = 44.7279
+custom_fonts/font = SubResource( 8 )
+text = "Progress: 1 / 67"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpotDetailText" type="Label" parent="UIZone/InfoZone"]
+anchor_left = 0.008
+anchor_top = 0.562
+anchor_right = 0.996
+anchor_bottom = 1.0
+margin_left = 0.128
+margin_top = -8.134
+margin_right = -0.0639954
+margin_bottom = -2.0
+custom_fonts/font = SubResource( 10 )
+text = "Spot Type: Neutral"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PromptZone" type="ColorRect" parent="UIZone"]
+margin_left = 354.538
+margin_top = 39.1409
+margin_right = 673.538
+margin_bottom = 125.141
+color = Color( 0.184314, 0.188235, 0.196078, 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="PromptMessage" type="Label" parent="UIZone/PromptZone"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 309.0
+margin_bottom = 80.0
+custom_fonts/font = SubResource( 12 )
+text = "Press \"A\" to roll the dice"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BoardMap" type="TileMap" parent="."]
+scale = Vector2( 2, 2 )
+tile_set = SubResource( 14 )
+cell_size = Vector2( 32, 32 )
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 1, 0, 0, 2, 5, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 0, 0, 8, 5, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 5, 0, 13, 0, 0, 14, 4, 0, 15, 4, 0, 65536, 4, 65536, 65537, 0, 65536, 65538, 5, 65536, 65539, 4, 65536, 65540, 4, 65536, 65541, 4, 65536, 65542, 4, 65536, 65543, 0, 65536, 65544, 5, 65536, 65545, 4, 65536, 65546, 4, 65536, 65547, 4, 65536, 65548, 5, 65536, 65549, 0, 65536, 65550, 4, 65536, 65551, 4, 65536, 131072, 4, 0, 131073, 0, 131072, 131074, 5, 131072, 131075, 0, 0, 131076, 5, 0, 131077, 4, 0, 131078, 4, 0, 131079, 0, 65536, 131080, 5, 65536, 131081, 4, 0, 131082, 0, 0, 131083, 4, 0, 131084, 5, 131072, 131085, 0, 131072, 131086, 4, 0, 131087, 4, 0, 196608, 4, 65536, 196609, 4, 65536, 196610, 4, 65536, 196611, 0, 65536, 196612, 5, 65536, 196613, 4, 65536, 196614, 4, 65536, 196615, 0, 65536, 196616, 4, 65536, 196617, 4, 65536, 196618, 0, 65536, 196619, 4, 65536, 196620, 4, 65536, 196621, 4, 65536, 196622, 4, 65536, 196623, 4, 65536, 262144, 4, 0, 262145, 4, 0, 262146, 4, 0, 262147, 0, 65536, 262148, 5, 131072, 262149, 0, 0, 262150, 5, 65536, 262151, 0, 131072, 262152, 4, 0, 262153, 4, 0, 262154, 0, 65536, 262155, 4, 0, 262156, 0, 0, 262157, 4, 0, 262158, 5, 0, 262159, 4, 0, 327680, 4, 65536, 327681, 4, 65536, 327682, 4, 65536, 327683, 0, 65536, 327684, 4, 65536, 327685, 0, 65536, 327686, 5, 65536, 327687, 4, 65536, 327688, 4, 65536, 327689, 4, 65536, 327690, 0, 65536, 327691, 4, 65536, 327692, 0, 65536, 327693, 4, 65536, 327694, 5, 65536, 327695, 4, 65536, 393216, 4, 131072, 393217, 4, 131072, 393218, 4, 131072, 393219, 0, 131072, 393220, 4, 131072, 393221, 0, 131072, 393222, 5, 131072, 393223, 4, 131072, 393224, 4, 131072, 393225, 4, 131072, 393226, 0, 131072, 393227, 4, 131072, 393228, 0, 131072, 393229, 4, 131072, 393230, 5, 131072, 393231, 4, 131072 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="BoardMapLarge" type="TileMap" parent="."]
+scale = Vector2( 0.284, 0.284 )
+tile_set = SubResource( 15 )
+cell_size = Vector2( 225, 225 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 1, 1, 0, 2, 3, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 1, 0, 8, 3, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 3, 0, 13, 1, 0, 14, 4, 0, 15, 4, 0, 65537, 1, 65536, 65538, 3, 65536, 65543, 1, 65536, 65544, 3, 65536, 65548, 3, 65536, 65549, 1, 65536, 131072, 4, 0, 131073, 1, 131072, 131074, 3, 131072, 131075, 1, 0, 131076, 3, 0, 131077, 4, 0, 131078, 4, 0, 131079, 1, 65536, 131080, 3, 131072, 131081, 3, 0, 131082, 1, 0, 131083, 4, 0, 131084, 3, 131072, 131085, 1, 131072, 131086, 4, 0, 131087, 4, 0, 196611, 1, 65536, 196612, 3, 65536, 196615, 1, 65536, 196617, 3, 65536, 196618, 1, 65536, 262144, 4, 0, 262145, 4, 0, 262146, 4, 0, 262147, 1, 65536, 262148, 3, 131072, 262149, 1, 0, 262150, 3, 0, 262151, 1, 131072, 262152, 4, 0, 262153, 3, 131072, 262154, 1, 65536, 262155, 4, 0, 262156, 1, 0, 262157, 4, 0, 262158, 3, 0, 262159, 4, 0, 327683, 1, 65536, 327685, 1, 65536, 327686, 3, 65536, 327690, 1, 65536, 327692, 1, 65536, 327694, 3, 65536, 393216, 4, 0, 393217, 4, 0, 393218, 4, 0, 393219, 1, 131072, 393220, 4, 0, 393221, 1, 131072, 393222, 3, 131072, 393223, 4, 0, 393224, 4, 0, 393225, 4, 0, 393226, 1, 131072, 393227, 4, 0, 393228, 1, 131072, 393229, 4, 0, 393230, 3, 131072, 393231, 4, 0 )
+
+[node name="Player" type="Area2D" parent="."]
+position = Vector2( 0, 384 )
+script = ExtResource( 2 )
+speed = 2
+
+[node name="Sprite" type="Sprite" parent="Player"]
+position = Vector2( 1, 0 )
+scale = Vector2( 0.191713, 0.186439 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 16 )
+
+[node name="Tween" type="Tween" parent="Player"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+
+[node name="RayCast2D" type="RayCast2D" parent="Player"]
+
+[node name="Boundries" type="Node" parent="."]
+
+[node name="Wall1" type="StaticBody2D" parent="Boundries"]
+position = Vector2( 1024, 384 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundries/Wall1"]
+position = Vector2( 32, 32 )
+shape = SubResource( 17 )
+
+[node name="Wall2" type="StaticBody2D" parent="Boundries"]
+position = Vector2( 960, 192 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundries/Wall2"]
+position = Vector2( 32, 32 )
+shape = SubResource( 17 )
+
+[node name="Wall3" type="StaticBody2D" parent="Boundries"]
+position = Vector2( -64, 256 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundries/Wall3"]
+position = Vector2( 32, 32 )
+shape = SubResource( 17 )
+
+[node name="Wall4" type="StaticBody2D" parent="Boundries"]
+position = Vector2( 0, 64 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundries/Wall4"]
+position = Vector2( 32, 32 )
+shape = SubResource( 17 )
+
+[node name="Wall5" type="StaticBody2D" parent="Boundries"]
+position = Vector2( 1024, 128 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundries/Wall5"]
+position = Vector2( 32, 32 )
+shape = SubResource( 17 )
+
+[node name="Wall6" type="StaticBody2D" parent="Boundries"]
+position = Vector2( 960, -64 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundries/Wall6"]
+position = Vector2( 32, 32 )
+shape = SubResource( 17 )
